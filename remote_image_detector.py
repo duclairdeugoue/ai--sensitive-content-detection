@@ -13,10 +13,11 @@ r = requests.get('https://api.sightengine.com/1.0/check.json', params=params)
 
 res = json.loads(r.text)
 
+
 nudityJsonData = res["nudity"]['sexual_display']
 weaponsJsonData = res['weapon']
-drugsJsonData = res['weapon']
-medicalDrugsJsonData = res['weapon']
+drugsJsonData = res['drugs']
+medicalDrugsJsonData = res['medical_drugs']
 offensiveJsonData = res['offensive']['prob']
 tobaccoJsonData = res['tobacco']['prob']
 
